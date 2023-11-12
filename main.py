@@ -12,13 +12,10 @@ import matplotlib.font_manager as fm
 # Basic Setting
 st.set_page_config(page_title="GPVC", page_icon="📑")
 
-fm.fontManager.addfont(font_file)
+fm.fontManager.addfont('NanumFontSetup_TTF_GOTHIC/NanumGothic.ttf')
 fm._load_fontmanager(try_read_cache=False)
     
-fontNames = [f.name for f in fm.fontManager.ttflist]
-fontname = st.selectbox("폰트 선택", unique(fontNames))
-
-plt.rc('font', family=fontname)
+plt.rc('font', family='NanumGothic')
 
 # Collection of def
 def find_info(df):
