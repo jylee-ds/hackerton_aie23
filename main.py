@@ -12,7 +12,7 @@ import matplotlib.font_manager as fm
 # Basic Setting
 st.set_page_config(page_title="GPVC", page_icon="📑")
 
-rc('font', family='Batang')
+plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
 
 # Collection of def
