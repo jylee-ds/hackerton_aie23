@@ -11,7 +11,14 @@ import matplotlib.font_manager as fm
 
 # Basic Setting
 st.set_page_config(page_title="GPVC", page_icon="📑")
-plt.rcParams['font.family'] = 'Malgun Gothic'
+
+fm.fontManager.addfont(font_file)
+fm._load_fontmanager(try_read_cache=False)
+    
+fontNames = [f.name for f in fm.fontManager.ttflist]
+fontname = st.selectbox("폰트 선택", unique(fontNames))
+
+plt.rc('font', family=fontname)
 
 # Collection of def
 def find_info(df):
