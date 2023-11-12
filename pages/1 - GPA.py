@@ -4,8 +4,6 @@ import pandas as pd
 import numpy as np
 import openpyxl
 import io
-import requests
-from bs4 import BeautifulSoup
 import xlsxwriter
 
 st.set_page_config(page_title="Mapping Demo", page_icon="🌍")
