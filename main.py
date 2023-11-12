@@ -11,10 +11,7 @@ import matplotlib.font_manager as fm
 # Basic Setting
 st.set_page_config(page_title="GPVC", page_icon="📑")
 
-rc('font', family='AppleGothic')
-plt.rcParams['axes.unicode_minus'] = False
-
-font_dirs = [os.getcwd() + '/customFonts']
+font_dirs = [os.getcwd() + '/NanumFontSetup_TTF_GOTHIC/NanumGothic.ttf']
 font_files = fm.findSystemFonts(fontpaths=font_dirs)
 
 for font_file in font_files:
