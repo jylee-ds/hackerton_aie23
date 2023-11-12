@@ -12,16 +12,8 @@ import matplotlib.font_manager as fm
 # Basic Setting
 st.set_page_config(page_title="GPVC", page_icon="📑")
 
-font_dirs = [os.getcwd() + '/NanumFontSetup_TTF_GOTHIC/NanumGothic.ttf']
-font_files = fm.findSystemFonts(fontpaths=font_dirs)
-
-for font_file in font_files:
-    fm.fontManager.addfont(font_file)
-fm._load_fontmanager(try_read_cache=False)
-    
-fontNames = [f.name for f in fm.fontManager.ttflist]
-fontname = st.selectbox("폰트 선택", unique(fontNames))
-plt.rc('font', family=fontname)
+rc('font', family='Batang')
+plt.rcParams['axes.unicode_minus'] = False
 
 # Collection of def
 def find_info(df):
